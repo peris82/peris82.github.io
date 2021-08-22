@@ -131,8 +131,9 @@ menu label:hover {
    display: flex;
    align-items: center;
    justify-content: center;
+   text-decoration: none;
     
-    font-size: 60px;
+    font-size: 30px;
     color: #000;
     
 }
