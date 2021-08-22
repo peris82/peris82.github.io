@@ -1,26 +1,63 @@
 * {
     font-family: sans-serif;
+    margin: 0;
 }
 
 .agroup {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    
 }
-.header, .main, .aside, .footer {
-    padding: 15px;
-}
+
 
 .header {
     background-color: rgb(122, 0, 146);
-    flex-basis: 60px;
+    margin: 0px;
+}
+
+.menu {
+    background-color: rgb(199, 127, 127);
+    margin: 0px;
+    
+    
+}
+
+#btn-menu {
+    display: none; 
+}
+
+menu label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid #000    ;
+}
+
+.menu-mov ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+
+}
+
+.menu-mov li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+
+}
+
+.menu-mov li:hover {
+    background: rgb(102, 102, 102);
+
 }
 
 .main {
     background-color: rgb(156, 156, 156);
-    flex-basis: 200px;
-    flex-grow: 2;
-    flex-shrink: 0;
+   
+    
 
 }
 
@@ -28,7 +65,7 @@
     background-color: rgb(99, 99, 99);
     flex-basis: 100px;
     flex-grow: 1;
-    flex-shrink: 0;
+    flex-shrink: 2;
    
 }
 
@@ -39,11 +76,35 @@
     
 }
 
+/*en casi que sea menor a 900px */
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+
+.flex-item {
+    background-color: #000;
+    color: aqua;
+    margin: 10px;
+    height: 450px;
+    min-width: 250px;
+    text-align: center;
+
+}
+
+
+
+
+
 @media screen and (min-width: 900px) {
     .agroup {
         display: grid;
-        grid-template-rows: 80px 1fr 1fr 1fr 1fr 80px;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 80px 1fr 1fr 1fr 1fr 1fr 80px;
+        grid-template-columns: repeat(2, fr1) 100px;
     }
 
 
@@ -51,20 +112,26 @@
         grid-column: 1 / span 3;
     }
 
+    .menu {
+        grid-column: 1 / span 3;
+    }
+    
     .main {
     
-        grid-row: 2 / 6;
+        grid-row: 3 / 7;
         grid-column: 1 / span 2;
+        gr
     }
 
     .aside {
-    
-        grid-row: 2 / 6;
+        grid-row: 3 / 7;
+        grid-column: 3 / 4;
+        
     }
 
     .footer {
     
-        grid-row: 6 / 7;
+        grid-row: 7 / 8;
         grid-column: 1 / span 3;
 
      }
@@ -72,21 +139,47 @@
 }
 
 /* ---MAIN 4 cajas con imagenes y demas -- */
+@media screen and (min-width: 900px) {
 
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+
+    .flex-item {
+        background-color: #000;
+        color: aqua;
+        margin: 5px;
+        height: 450px;
+        min-width: 350px;
+        text-align: center;
+    
+    }
+   
+
+    
 
 }
 
-.flex-item {
-    background-color: #000;
-    color: aqua;
-    margin: 5px;
-    height: 100px;
-    width: 100px;
-    min-width: 100px;
-    text-align: center;
-    flex: 1;
 
-}
+
+/*      
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(2, fr1);
+
+
+
+      background-color: #000;
+        color: aqua;
+        margin: 5px;
+        height: 450px;
+        min-width: 250px;
+        text-align: center;
+        */
+
+        
+
