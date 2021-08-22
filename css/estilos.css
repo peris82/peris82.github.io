@@ -22,6 +22,8 @@
     
 }
 
+/*  abajo es el menu desplegabe*/
+
 #btn-menu {
     display: none; 
 }
@@ -31,7 +33,12 @@ menu label {
     width: 30px;
     height: 30px;
     padding: 10px;
-    border-right: 1px solid #000    ;
+    border-right: 1px solid #000;
+}
+
+menu label:hover {
+    cursor: pointer;
+    background: rgb(102, 102, 102);
 }
 
 .menu-mov ul {
@@ -39,6 +46,7 @@ menu label {
     list-style: none;
     padding: 0;
     display: flex;
+    
 
 }
 
@@ -49,10 +57,42 @@ menu label {
 
 }
 
+.menu-mov li {
+    border-right: 1px solid #000;
+}
+
 .menu-mov li:hover {
     background: rgb(102, 102, 102);
 
 }
+
+@media (max-width:900px) {
+    
+    menu label {
+        display: block;
+    }
+
+    .menu-mov {
+        position: absolute;
+        background: rgb(199, 127, 127);
+        width: 40%;
+        margin-left: -70%;
+    }
+
+    .menu-mov ul {
+        flex-direction: column;
+    }
+
+    .menu-mov li {
+        border-top: 1px solid #000;
+    }
+
+    #btn-menu:checked ~ .menu-mov {
+        margin: 0;
+    }
+}
+
+/* arriba  para menu */
 
 .main {
     background-color: rgb(156, 156, 156);
