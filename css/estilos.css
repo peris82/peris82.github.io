@@ -1,5 +1,6 @@
 * {
     font-family: sans-serif;
+    
     margin: 0;
 }
 
@@ -13,16 +14,25 @@
 .header {
     background-color: rgb(122, 0, 146);
     margin: 0px;
+    height: 100px;
 }
 
 .menu {
-    background-color: rgb(199, 127, 127);
+    
+    background-image: linear-gradient(rgb(158, 158, 158), rgb(90, 90, 90));
+    
     margin: 0px;
-    padding: 0;
+    padding: 0px;
     
     
 }
 
+
+
+
+
+
+  
 /*  abajo es el menu desplegabe*/
 
 #btn-menu {
@@ -41,6 +51,7 @@ menu label:hover {
     cursor: pointer;
     background: rgb(102, 102, 102);
 }
+
 
 .menu-mov ul {
     margin: 0;
@@ -75,10 +86,11 @@ menu label:hover {
 
     .menu-mov {
         position: absolute;
-        background: rgb(199, 127, 127);
+        background: rgb(177, 177, 177);
         width: 50%;
         margin-left: -70%;
         transition: all 0.2s;
+        z-index: 1;
     }
 
     .menu-mov ul {
@@ -103,6 +115,7 @@ menu label:hover {
 
 }
 
+
 .aside {
     background-color: rgb(99, 99, 99);
     flex-basis: 100px;
@@ -112,30 +125,38 @@ menu label:hover {
 }
 
 .footer {
-    background-color: rgb(48, 64, 136);
-   
-   
+    background-color: rgb(181, 101, 201);
     
+   
+}
+
+.footer h2 {
+    font-family: sans-serif;
+    text-align: right;
+    font-size: 18px;
+    margin-right: 20px;
+    padding: 5px;
+
 }
 
 /* -- to top ---*/
 
 .to-top {
-    background: rgb(156, 62, 199);
+    background: rgb(185, 185, 185);
     position: fixed;
-    bottom: 20px;
-    right: 30px;
+    bottom: 35px;
+    right: 25px;
     width: 50px;
     height: 50px;
     border: 1px solid #000;
     border-radius: 50%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   text-decoration: none;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     font-size: 30px;
     color: #000;
+    transition: all 0.5s;
     
 }
 
@@ -144,26 +165,84 @@ menu label:hover {
 }
 
 
-/*en casi que sea menor a 900px */
+/*en caso que sea menor a 900px */
+
+.iframe2 {
+    
+    top:0;
+    left: 0;
+    width: 100%;
+    height: auto; 
+    margin: auto; 
+    position: relative;
+    padding-top: 56.25%;
+    
+}   
+
+.flex-item iframe {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;   
+   
+}
 
 .flex-container {
     display: flex;
     flex-direction: column;
     
     
+    
 }
+  
 
 
-.flex-item {
-    background-color: #000;
-    color: aqua;
+
+
+.flex-item caja2 {
+    background-color: rgb(146, 95, 170);
+    color: rgb(0, 0, 0);
     margin: 10px;
-    height: 450px;
+    height: 70vh;
     min-width: 250px;
     text-align: center;
+    
 
 }
 
+.flex-item .caja3 {
+    background-color: rgb(146, 95, 170);
+    color: rgb(0, 0, 0);
+    margin: 10px;
+    height: 50vh;
+    min-width: 250px;
+    text-align: center;
+    padding: 10px 10px;
+
+}
+
+.flex-item {
+    background-color: rgb(146, 95, 170);
+    color: rgb(0, 0, 0);
+    margin: 10px;
+    height: 80vh;
+    min-width: 250px;
+    text-align: center;
+    padding: 10px 10px;
+
+}
+
+.flex-item .caja5 {
+    background-color: rgb(146, 95, 170);
+    color: rgb(0, 0, 0);
+    margin: 10px;
+    height: 80vh;
+    min-width: 250px;
+    text-align: center;
+    padding: 10px 10px;
+
+}
 
 
 
@@ -182,13 +261,18 @@ menu label:hover {
 
     .menu {
         grid-column: 1 / span 3;
+        grid-row: 2 / 3;
+        margin: 0px;
+        padding: 0px;
+
+
     }
     
     .main {
     
         grid-row: 3 / 7;
         grid-column: 1 / span 2;
-        gr
+        
     }
 
     .aside {
